@@ -31,6 +31,21 @@ export default function CardView() {
       />
    )
 
+   const renderPriceControls = () => (
+      <View style={styles.priceLabelContainer}>
+         <Button 
+         title='<'
+         color={"#01A6B3"}
+         onPress={() => {}}
+         />
+         <Text style={styles.priceLabel}> VALOR </Text>
+         <Button title='>'
+         color={"#01A6B3"} 
+         onPress={() => {}}       
+         />
+      </View>
+   )
+
   return(
      <View style={styles.imageContainer}>
         {renderLogoBox()}
@@ -39,6 +54,7 @@ export default function CardView() {
         {renderCarImage()}
         <Divider/>
         <BuyButton/>
+        {renderPriceControls()}
      </View>
   )
 }
